@@ -26,6 +26,10 @@ ul {
     list-style: none;
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Manrope', 'sans-serif';
+}
+
 /* --- Utility Classes --- */
 .container{
     max-width: 1200px;
@@ -126,6 +130,7 @@ header{
     font-size: 2rem;
     padding: 0.5rem;
     line-height: 1.2;
+    font-weight: 500;
 }
 
 .bigpost .bigDate{
@@ -193,6 +198,7 @@ header{
 .sidebar .item h3{
     grid-column-start: 1;
     grid-column-end: 3;
+    font-weight: 600;
 }
 
 .item .smallDate{
@@ -287,8 +293,6 @@ footer{
     color: #FFFFFF;
 }
 
-
-
 .copyrightSection{
     background: #111111;
     padding: 2rem 0;
@@ -309,6 +313,10 @@ footer{
 
 .copyright .designer{
     text-align: end;
+}
+
+footer p, footer li{
+    font-weight: 300;
 }
 
 
@@ -356,6 +364,12 @@ footer{
         grid-template-rows: repeat(2, auto);
         grid-template-columns: repeat(2, auto);
         grid-row-gap: 1rem;
+    }
+
+    .bigpost .bigDate {
+        padding: 0.7rem 0;
+        font-size: 0.9rem;
+        font-weight: 300;
     }
 
     .sidebar{
@@ -414,7 +428,7 @@ footer{
    }
 
    .sidebar .item {
-       grid-row-gap: 1rem;
+       grid-row-gap: 0.3rem;
    }
 
    .category {
@@ -426,15 +440,16 @@ footer{
        font-weight: 400;
    }
 
-   .section2Grid {
+   .section1Grid, .section2Grid {
        grid-template-rows: repeat(2, auto);
        grid-template-columns: auto;
        grid-row-gap: 2rem;
    }
 
-    .section2Grid .postGrid .grid img{
-        height: 7rem;
-        aspect-ratio: 1/1;
+   .postGrid .grid img {
+       height: 10rem;
+       width: 100%;
+       aspect-ratio: 3/2;
    }
 
    .section3Grid,
@@ -465,8 +480,13 @@ footer{
    .section4Grid .postGrid .grid img{
     grid-row-start: 1;
     grid-row-end: 3;
-    height: 100%;
+    max-height: 10rem;
     width: 100%;
+    aspect-ratio: 3/2;
+   }
+
+   .postGrid .grid p {
+       font-size: 0.8rem;
    }
 
    .content{
